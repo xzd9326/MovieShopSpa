@@ -8,3 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'movieshopspa';
 }
+
+
+// main.ts => appModule => AppComponent => View
+// <partial name=""></partial>
+// HomePageView => movieCard
