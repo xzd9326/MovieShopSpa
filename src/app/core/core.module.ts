@@ -14,7 +14,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     CommonModule
   ],
   exports:[
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class CoreModule { }
