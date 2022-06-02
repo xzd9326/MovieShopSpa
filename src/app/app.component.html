@@ -7,8 +7,15 @@
     <!-- If you wanna use a component outside its own module in another module, then that module should export that component -->
     <div class="container-fluid mt-1">
         <router-outlet></router-outlet>
+        <!-- <app-home></app-home> -->
     </div>
     
     <app-footer></app-footer>
 </div>
+
+<!-- LAZILY LOAD feature module based on conditions. -->
+<!-- 1. Create Feature Folders -->
+<!-- 2. Create individual Module and Routing Module for each feature folder -->
+<!-- 3. Create each feature folder's appcomponent for router outlet just like appcomponent for whole application -->
+<!-- Make sure each feature module has all the components for that module inside the declarations array -->
 
