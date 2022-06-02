@@ -1,1 +1,34 @@
-<p>login works!</p>
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h4> Login </h4>
+        <hr>
+        <!-- Show error message if inValidLogin property is true -->
+        <div *ngIf="invalidLogin" class="alert alert-danger">
+            Please check email and password
+        </div>
+        <form (ngSubmit) = "submit()">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="loginModel.email">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" 
+                    [(ngModel)]="loginModel.password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+    
+</div>
+
+<!-- 
+    In Angular, to work with forms we have two approaches
+
+    1. Template-driven approach -> when your form is simple and it does not have too many rules
+        1. Import required modules, Forms and Reactiv modules
+        2. Create the required Model (Login email/password) Banana in the box syntax
+        3. Use ngModel Directive for the input element with model property so that ngModel will associate the input control with FormControl instance
+
+    2. Reactive approach -> When your form is complex and has many validation rules etc
+ -->
