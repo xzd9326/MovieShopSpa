@@ -10,6 +10,7 @@ export class PurchasesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // call the UserService, which will call the user api method https://localhost:7067/api/User/purchases
   }
 
 }
