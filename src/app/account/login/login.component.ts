@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit () {
-    console.log('Clickd on submit button');
+    console.log('Clicked on submit button');
     console.log(this.loginModel)
     this.accountService.login(this.loginModel)
       .subscribe(

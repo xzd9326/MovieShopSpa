@@ -14,7 +14,7 @@ export class AccountService {
   public currentUser = this.currentUserSubject.asObservable();
 
   private isLoggedInSubject = new BehaviorSubject<boolean>(false);
-  private isLoggedIn = this.isLoggedInSubject.asObservable();
+  public isLoggedIn = this.isLoggedInSubject.asObservable();
 
   private jwtHelper = new JwtHelperService();
 

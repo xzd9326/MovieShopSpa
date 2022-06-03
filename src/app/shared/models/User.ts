@@ -1,7 +1,7 @@
 export interface User {
     // properties of JWT token
     email: string;
-    role: Array<string>
+    role: Array<string>;
     exp: string;
     alias: string;
     family_name: string;

@@ -26,12 +26,20 @@
             </ul>
           </li>
         </ul>
-        <div class="text-end">
+        <div class="text-end" *ngIf="!isUserLoggedIn">
           <a class="btn btn-outline-primary me-2" [routerLink]="['account/login']">
             Login 
           </a>
           <a class="btn btn-outline-primary me-2" [routerLink]="['account/register']">
             Register
+          </a>
+        </div>
+        <div *ngIf="isUserLoggedIn">
+          {{ currentUser.family_name + ' ' + currentUser.given_name}}
+          <a [routerLink]="['/user/purchases']" class="nav-link">Purchases</a>
+          <a [routerLink]="[ 'urer/favorites']" class="nav-link">Favorites</a>
+          <a class="btn btn-outline-primary me-2" (click)="logout()">
+            Logout
           </a>
         </div>
       </div>
