@@ -14,7 +14,12 @@ export class HeaderComponent implements OnInit {
   currentUser!: User;
 
   constructor(private accountService: AccountService, private router: Router) { 
-    this.accountService.isLoggedIn.subscribe(resp => this.isUserLoggedIn = resp );
+    this.accountService.isLoggedIn.subscribe(resp => 
+      {this.isUserLoggedIn = resp;
+       console.log('login status: ' + this.isUserLoggedIn);
+      }
+
+      );
     this.accountService.currentUser.subscribe(resp => this.currentUser = resp );
   }
 

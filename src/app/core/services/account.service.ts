@@ -77,7 +77,8 @@ export class AccountService {
     var tokenValue = localStorage.getItem('token');
 
     // if token is present and token is not expired
-    if (tokenValue && this.jwtHelper.isTokenExpired(tokenValue)) {
+    if (tokenValue && !this.jwtHelper.isTokenExpired(tokenValue)) {
+
 
       // decode the token and push the values to observables
       const decodedToken = this.jwtHelper.decodeToken(tokenValue);
